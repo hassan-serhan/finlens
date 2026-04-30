@@ -1,0 +1,108 @@
+/* Design tokens — synced from /design.md and the FinLens prototype. */
+
+:root {
+  /* ===== Material/design.md tokens (used by auth + system surfaces) ===== */
+  --color-surface: #f5faff;
+  --color-surface-dim: #d1dbe4;
+  --color-surface-bright: #f5faff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eaf5fe;
+  --color-surface-container: #e5eff8;
+  --color-surface-container-high: #dfeaf2;
+  --color-surface-container-highest: #d9e4ec;
+  --color-surface-variant: #d9e4ec;
+  --color-on-surface: #131d23;
+  --color-on-surface-variant: #3c4a3d;
+  --color-inverse-surface: #283238;
+  --color-inverse-on-surface: #e8f2fb;
+  --color-outline: #6c7b6b;
+  --color-outline-variant: #bbcbb9;
+  --color-primary: #006d2f;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #25d366;
+  --color-on-primary-container: #005523;
+  --color-secondary: #4f6448;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #d1eac6;
+  --color-on-secondary-container: #556a4d;
+  --color-tertiary: #625e56;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #bdb7ae;
+  --color-on-tertiary-container: #4c4841;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-background: #f5faff;
+  --color-on-background: #131d23;
+
+  /* ===== Prototype palette (used by app pages) ===== */
+  --primary: #25D366;
+  --primary-700: #1FB055;
+  --primary-900: #0E5C2C;
+  --primary-tint: #E6FFDA;
+  --secondary-mint: #E6FFDA;
+  --tertiary-cream: #FCF5EB;
+  --tertiary-warm: #F5E9D2;
+
+  --neutral-900: #111B21;
+  --neutral-800: #1F2A30;
+  --neutral-700: #2E3B42;
+  --neutral-500: #5C6970;
+  --neutral-400: #8A969D;
+  --neutral-300: #BCC4C9;
+  --neutral-200: #DCE2E5;
+  --neutral-100: #EEF1F3;
+  --neutral-50:  #F7F9FA;
+  --white:       #FFFFFF;
+
+  --danger:  #E5484D;
+  --warning: #F0B429;
+  --info:    #4D8DE5;
+
+  /* ===== Spacing (8px rhythm) ===== */
+  --space-xs: 4px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --gutter: 16px;
+
+  /* ===== Radius ===== */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* ===== Typography ===== */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-arabic: 'Cairo', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font: var(--font-sans);
+
+  --text-headline-lg: 700 24px/32px var(--font-sans);
+  --text-headline-md: 600 20px/28px var(--font-sans);
+  --text-body-lg: 400 16px/24px var(--font-sans);
+  --text-body-md: 400 14px/20px var(--font-sans);
+  --text-label-md: 500 12px/16px var(--font-sans);
+  --text-label-sm: 400 11px/14px var(--font-sans);
+
+  /* ===== Elevation ===== */
+  --shadow-1: 0 1px 2px rgba(19, 29, 35, 0.04);
+  --shadow-2: 0 4px 14px rgba(19, 29, 35, 0.06);
+  --shadow-fab: 0 8px 24px rgba(0, 109, 47, 0.18);
+  --shadow-sm: 0 1px 2px rgba(17, 27, 33, 0.04), 0 0 0 1px rgba(17, 27, 33, 0.04);
+  --shadow-md: 0 4px 16px rgba(17, 27, 33, 0.06), 0 0 0 1px rgba(17, 27, 33, 0.04);
+  --shadow-lg: 0 12px 32px rgba(17, 27, 33, 0.10), 0 0 0 1px rgba(17, 27, 33, 0.04);
+}
+
+html[dir='rtl'] body {
+  font-family: var(--font-arabic);
+}

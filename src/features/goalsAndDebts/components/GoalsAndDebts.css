@@ -1,0 +1,307 @@
+/* Goals & Debts — visual layer */
+
+.gd-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  margin-block-end: 18px;
+  align-items: stretch;
+}
+
+@media (max-width: 1100px) {
+  .gd-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .gd-tiles { grid-template-columns: 1fr; }
+}
+
+.gd-tile {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 16px;
+  min-height: 132px;
+}
+
+.gd-tile__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.gd-tile__label {
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.gd-tile__value {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.gd-tile__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  background: var(--neutral-100);
+}
+
+.gd-tile__bar {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--neutral-100);
+  overflow: hidden;
+}
+
+.gd-tile__fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: inherit;
+  transition: width 200ms ease;
+}
+
+.gd-tile__hint {
+  font-size: 12px;
+  color: var(--neutral-500);
+}
+
+.gd-tile--dark { background: var(--neutral-900); color: #fff; }
+.gd-tile--dark .gd-tile__hint { color: rgba(255,255,255,0.65); }
+.gd-tile--dark .gd-tile__bar { background: rgba(255,255,255,0.12); }
+.gd-tile--dark .gd-tile__icon { background: var(--primary); color: var(--neutral-900); }
+
+.gd-tile--tint { background: var(--secondary-mint, #DCFAE6); }
+.gd-tile--warm { background: #FFF4E0; }
+
+.gd-tabs {
+  display: inline-flex;
+  background: var(--neutral-100);
+  padding: 4px;
+  border-radius: 999px;
+  gap: 4px;
+}
+
+.gd-tabs__btn {
+  border: 0;
+  padding: 7px 16px;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 999px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--neutral-700);
+}
+
+.gd-tabs__btn.is-active {
+  background: var(--neutral-900);
+  color: #fff;
+}
+
+.gd-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .gd-grid { grid-template-columns: 1fr; }
+}
+
+.gd-card {
+  position: relative;
+  display: grid;
+  gap: 12px;
+}
+
+.gd-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.gd-card__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.gd-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--secondary-mint, #DCFAE6);
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.gd-card__name {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+
+.gd-card__sub {
+  font-size: 12.5px;
+  color: var(--neutral-500);
+  margin-top: 2px;
+}
+
+.gd-card__amount {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.gd-card__amount-sub {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--neutral-400);
+}
+
+.gd-card__bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--neutral-100);
+  overflow: hidden;
+}
+
+.gd-card__fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: inherit;
+  transition: width 200ms ease;
+}
+
+.gd-card__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.gd-card__stat-label { font-size: 11.5px; color: var(--neutral-500); }
+.gd-card__stat-value { font-weight: 700; font-size: 14px; }
+
+.gd-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--neutral-100);
+  gap: 10px;
+}
+
+.gd-card__actions { display: flex; gap: 6px; }
+
+/* Priority backgrounds */
+.gd-card--prio-high {
+  background: linear-gradient(135deg, #2A1719 0%, #4A1D22 100%);
+  color: #fff;
+}
+.gd-card--prio-high .gd-card__sub,
+.gd-card--prio-high .gd-card__amount-sub,
+.gd-card--prio-high .gd-card__stat-label { color: rgba(255,255,255,0.6); }
+.gd-card--prio-high .gd-card__bar { background: rgba(255,255,255,0.12); }
+.gd-card--prio-high .gd-card__footer { border-color: rgba(255,255,255,0.1); }
+.gd-card--prio-high .gd-card__icon { background: #E5484D; color: #fff; }
+
+.gd-card--prio-medium { background: var(--white); }
+
+.gd-card--prio-low {
+  background: linear-gradient(135deg, #F5FFF6 0%, #E8FBEF 100%);
+}
+
+.gd-prio-chip {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+.gd-prio-chip--high { background: #FCDDDE; color: var(--danger, #E5484D); }
+.gd-prio-chip--medium { background: var(--neutral-100); color: var(--neutral-700); }
+.gd-prio-chip--low { background: var(--secondary-mint, #DCFAE6); color: var(--primary-900, #0E5C2C); }
+
+.gd-card--prio-high .gd-prio-chip--high { background: rgba(229, 72, 77, 0.2); color: #FCA5A8; }
+
+.gd-activity {
+  display: grid;
+  gap: 6px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.gd-activity__row {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--neutral-50, #F8F9FA);
+}
+
+.gd-activity__icon {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: grid; place-items: center;
+  font-size: 16px;
+  background: var(--secondary-mint, #DCFAE6);
+  color: var(--primary-900, #0E5C2C);
+}
+
+.gd-activity__icon--debt {
+  background: #FFE9D6;
+  color: #B8580B;
+}
+
+.gd-activity__name { font-weight: 700; font-size: 13.5px; }
+.gd-activity__meta { font-size: 11.5px; color: var(--neutral-500); }
+
+.gd-activity__amount {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.gd-empty {
+  text-align: center;
+  padding: 32px 16px;
+  color: var(--neutral-500);
+  font-size: 13px;
+}
+
+.gd-priority-picker {
+  display: flex;
+  gap: 8px;
+}
+
+.gd-priority-picker__btn {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid var(--neutral-100);
+  background: var(--white);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.gd-priority-picker__btn.is-active {
+  border-color: var(--neutral-900);
+  background: var(--neutral-900);
+  color: #fff;
+}

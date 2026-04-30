@@ -1,0 +1,490 @@
+{
+  "app": {
+    "name": "FinLens",
+    "tagline": "Family finance, learned together"
+  },
+  "common": {
+    "email": "Email",
+    "password": "Password",
+    "name": "Full name",
+    "submit": "Submit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "ok": "OK",
+    "close": "Close",
+    "done": "Done",
+    "or": "or",
+    "loading": "Loading…",
+    "language": "Language",
+    "adminOnly": "Admin only"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "income": "Income & Accounts",
+    "expenses": "Expenses",
+    "goals": "Goals",
+    "family": "Family",
+    "education": "Education",
+    "signOut": "Sign out"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to continue managing your household.",
+      "submit": "Sign in",
+      "noAccount": "New to FinLens?",
+      "createAccount": "Create an account"
+    },
+    "signup": {
+      "title": "Create your family account",
+      "subtitle": "You'll be the household admin. You can invite your family next.",
+      "submit": "Create account",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "errors": {
+      "invalidEmail": "Please enter a valid email address.",
+      "shortPassword": "Password must be at least 8 characters.",
+      "missingName": "Please enter your full name.",
+      "generic": "Something went wrong. Please try again."
+    },
+    "success": {
+      "checkEmail": "Check your email to confirm your account."
+    }
+  },
+  "family": {
+    "title": "Family & Profile",
+    "subtitle": "See who's on your household, invite new members, and review what each role can do.",
+    "hero": {
+      "titleFallback": "Your family",
+      "members": "members",
+      "since": "together since {{value}}",
+      "familyXp": "family XP",
+      "invite": "Invite member"
+    },
+    "members": { "title": "Members" },
+    "member": {
+      "xp": "XP",
+      "level": "Level",
+      "relation": "Relation",
+      "role": "Role"
+    },
+    "detail": {
+      "invited": "Joined {{value}}"
+    },
+    "perms": {
+      "title": "Permissions by role",
+      "subtitle": "Members can do everything except manage Income & Accounts — that's admin-only.",
+      "role": { "Admin": "Admin", "Member": "Member" },
+      "label": {
+        "viewExpenses": "View family expenses",
+        "addExpenses": "Add new expenses",
+        "viewGoals": "View savings goals",
+        "contributeGoals": "Contribute to goals",
+        "viewIncome": "View income & accounts",
+        "manageIncome": "Manage income & accounts",
+        "manageMembers": "Manage family members"
+      }
+    },
+    "invite": {
+      "title": "Invite a family member",
+      "subtitle": "You'll set the password — they sign in with email and password right away.",
+      "password": "Password",
+      "passwordPh": "At least 8 characters",
+      "passwordHint": "You'll share this password with them. They can change it after signing in.",
+      "role": "Role",
+      "relation": "Relation",
+      "submit": "Create account",
+      "errors": {
+        "name": "Please enter the member's name.",
+        "email": "Please enter a valid email address.",
+        "password": "Password must be at least 8 characters.",
+        "generic": "Could not create the account. Please try again."
+      }
+    }
+  },
+  "expenses": {
+    "title": "Expenses",
+    "subtitle": "Log spending so the family stays in sync, and track every transaction across categories.",
+    "add": {
+      "title": "Add an expense",
+      "subtitle": "Log spending so the family stays in sync",
+      "description": "Description",
+      "descriptionPh": "e.g. Trader Joe's",
+      "amount": "Amount",
+      "category": "Category",
+      "date": "Date",
+      "note": "Note (optional)",
+      "notePh": "Add a note for the family…",
+      "submit": "Add expense",
+      "errors": {
+        "desc": "Please add a description.",
+        "amount": "Please enter a valid amount.",
+        "category": "Please pick a category.",
+        "generic": "Could not save the expense. Please try again."
+      }
+    },
+    "glance": {
+      "title": "This month at a glance",
+      "subtitle": "Across all categories",
+      "over": "Over",
+      "noBudget": "no budget",
+      "empty": "Add categories on the Income page first."
+    },
+    "txns": {
+      "title": "Transactions",
+      "count": "in range",
+      "spent": "spent",
+      "from": "From",
+      "to": "To",
+      "all": "All",
+      "empty": "No transactions in this range."
+    }
+  },
+  "income": {
+    "title": "Income & Accounts",
+    "subtitle": "Set balances, plan your monthly budget, log income, and manage allowances.",
+    "accounts": {
+      "adjust": "Add",
+      "adjustTitle": "Adjust {{name}}",
+      "currentBalance": "Current balance: {{value}}",
+      "amount": "Amount",
+      "main": { "name": "Main · Expenses" },
+      "savings": { "name": "Savings · Goals" },
+      "mainHint": "Income lands here by default",
+      "savingsHint": "Funds your active goals",
+      "mode": { "set": "Set", "add": "Add", "sub": "Withdraw" }
+    },
+    "budget": {
+      "title": "Monthly budget",
+      "subtitle": "Cap your spend, allocate by category",
+      "monthlyTotal": "Total monthly budget",
+      "income": "Income",
+      "budget": "Budget",
+      "onTrack": "On track",
+      "overIncome": "Over income",
+      "categories": "Category budgets",
+      "allocated": "Allocated",
+      "addCategory": "Add category",
+      "addCategoryTitle": "New category",
+      "categoryName": "Category name",
+      "icon": "Choose an icon",
+      "colorAuto": "Color is assigned automatically",
+      "shuffleColor": "Shuffle color"
+    },
+    "income": {
+      "sourcesTitle": "Income sources",
+      "ledgerTitle": "Income Ledger",
+      "ledgerSub": "Every income entry, newest first",
+      "streams": "streams",
+      "thisMonth": "this month",
+      "monthly": "Monthly",
+      "add": "Add income",
+      "addTitle": "Add income source",
+      "addSubtitle": "Goes into Main Account by default",
+      "source": "Source name",
+      "sourcePh": "e.g. Quarterly bonus",
+      "description": "Description",
+      "amount": "Amount",
+      "date": "Date",
+      "empty": "No income entries yet — add your first source."
+    },
+    "allowance": {
+      "title": "Family allowance manager",
+      "subtitle": "Track each child's wallet — tap a row to see history",
+      "addMember": "Add member",
+      "wallet": "Wallet",
+      "history": "Allowance history",
+      "noHistory": "No transactions yet.",
+      "empty": "No kids on this household yet. Add one to start managing allowances.",
+      "add": "Allowance",
+      "remove": "Deduct",
+      "deduct": "Deduct",
+      "amount": "Amount",
+      "reason": "Reason",
+      "reasonCreditPh": "Weekly allowance, bonus chore…",
+      "reasonDebitPh": "Approved purchase, deduction…",
+      "creditTitle": "Add allowance — {{name}}",
+      "debitTitle": "Remove allowance — {{name}}",
+      "currentBalance": "Wallet balance: {{value}}",
+      "inviteTitle": "Add a family member",
+      "relation": "Relation",
+      "age": "Age",
+      "thisMonthIncome": "This month income",
+      "adminHint": "own income tracked in ledger above"
+    }
+  },
+  "goals": {
+    "title": "Goals & Debts",
+    "subtitle": "Track what you're saving for and what you owe — together.",
+    "tiles": {
+      "mainBalance": "Main account",
+      "mainHint": "Available across the household",
+      "totalSaved": "Total saved",
+      "savedToward": "{{pct}}% toward {{target}} in goals",
+      "debtRemaining": "Debt remaining",
+      "debtPaid": "{{pct}}% paid off",
+      "thisMonth": "This month",
+      "thisMonthCount": "{{count}} contributions & payments",
+      "seeAll": "See all"
+    },
+    "tabs": {
+      "savings": "Savings goals · {{count}}",
+      "debts": "Debts · {{count}}"
+    },
+    "actions": {
+      "newGoal": "New goal",
+      "newDebt": "New debt"
+    },
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "card": {
+      "target": "Target",
+      "noDue": "No due date",
+      "of": "of {{value}}",
+      "remaining": "Remaining",
+      "remainingOf": "remaining of {{value}} original",
+      "monthlyPace": "Monthly pace",
+      "progress": "Progress",
+      "paid": "Paid off",
+      "payoff": "Payoff",
+      "contribute": "Contribute",
+      "pay": "Make payment",
+      "seeHistory": "See history"
+    },
+    "empty": {
+      "goals": "No savings goals yet — start one with the New goal button.",
+      "debts": "No debts tracked. Add one to see payoff progress."
+    },
+    "contribute": {
+      "title": "Contribute to {{name}}",
+      "subtitle": "{{saved}} of {{target}} saved",
+      "amount": "Amount",
+      "date": "Date",
+      "submit": "Contribute"
+    },
+    "pay": {
+      "title": "Pay {{name}}",
+      "subtitle": "{{value}} remaining",
+      "amount": "Amount",
+      "date": "Date",
+      "submit": "Make payment"
+    },
+    "add": {
+      "goalTitle": "New savings goal",
+      "debtTitle": "New debt",
+      "name": "Name",
+      "target": "Target amount",
+      "totalOwed": "Total owed",
+      "monthlyPay": "Monthly payment",
+      "apr": "APR (%)",
+      "dueDate": "Target date",
+      "payoffDate": "Payoff date",
+      "icon": "Icon (emoji)",
+      "priority": "Priority"
+    },
+    "history": {
+      "goalTitle": "{{name}} · contributions",
+      "debtTitle": "{{name}} · payments",
+      "subtitle": "{{count}} entries",
+      "empty": "No entries yet.",
+      "someone": "Someone"
+    },
+    "activity": {
+      "title": "This month's activity",
+      "subtitle": "{{count}} entries · {{total}} total",
+      "empty": "No contributions or payments this month yet."
+    },
+    "errors": {
+      "name": "Please enter a name.",
+      "target": "Please enter a valid amount.",
+      "amount": "Please enter a valid amount.",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "dashboard": {
+    "greeting": "Hi, {{name}}",
+    "subtitle": "A pulse-check on this month — spend, savings, debts, and family activity.",
+    "stats": {
+      "spent": {
+        "label": "Spent this month",
+        "ofBudget": "of {{value}} budget",
+        "noBudget": "No monthly budget set"
+      },
+      "saved": {
+        "label": "Saved this month",
+        "meta": "across {{count}} goals"
+      },
+      "totalSaved": {
+        "label": "Total saved",
+        "meta": "of {{value}} target",
+        "empty": "No goals yet"
+      },
+      "debt": {
+        "label": "Debt payoff",
+        "meta": "{{value}} remaining",
+        "empty": "No debts tracked"
+      }
+    },
+    "budgetRing": {
+      "title": "{{month}} budget",
+      "subtitle": "{{spent}} of {{budget}} used",
+      "spent": "Spent",
+      "remaining": "Remaining",
+      "ofBudget": "of {{value}} budget",
+      "legendAmount": "{{used}} / {{budget}}",
+      "noBudget": "No budget",
+      "setBudget": "Set one on the Income page"
+    },
+    "bars": {
+      "title": "Spending by category",
+      "subtitle": "Actual vs. budgeted, this month",
+      "spent": "Spent",
+      "budget": "Budget",
+      "openExpenses": "Open expenses",
+      "empty": "Add categories on the Income page first."
+    },
+    "dailySpend": {
+      "title": "Daily spending",
+      "subtitle": "Track your expenses day by day",
+      "spent": "Spent",
+      "total": "Month total",
+      "tooltipDay": "Day {{day}}",
+      "tooltipMore": "+{{count}} more",
+      "empty": "No expenses for this month."
+    },
+    "goals": {
+      "title": "Savings goals",
+      "subtitle": "What the family is working toward",
+      "viewAll": "View all",
+      "openCard": "Open {{name}}",
+      "savedOf": "{{saved}} of {{target}}",
+      "dueBy": "by {{value}}",
+      "noDue": "No deadline",
+      "empty": "No goals yet — start one on the Goals page."
+    },
+    "activity": {
+      "title": "Family activity",
+      "subtitle": "Live across all members",
+      "expense": "spent {{amount}} on {{what}}",
+      "goal": "added {{amount}} to {{what}}",
+      "debt": "paid {{amount}} toward {{what}}",
+      "someone": "Someone",
+      "justNow": "just now",
+      "empty": "No activity in the last month yet."
+    }
+  },
+  "wallet": {
+    "label": "Your wallet",
+    "hint": "Spendable balance for this household",
+    "source": {
+      "main": "main account",
+      "wallet": "wallet"
+    },
+    "recent": {
+      "title": "Recent activity",
+      "subtitle": "Your two most recent wallet entries",
+      "seeAll": "See all",
+      "empty": "No wallet activity yet."
+    },
+    "history": {
+      "title": "{{name}}'s wallet history",
+      "subtitle": "{{count}} entries",
+      "empty": "No wallet activity yet."
+    },
+    "warn": {
+      "title": "Not enough funds",
+      "subtitle": "Can't cover this from your {{source}}",
+      "body": "This action would overdraw your {{source}}. Top up or lower the amount and try again.",
+      "available": "Available",
+      "needed": "Needed",
+      "shortfall": "Short by {{value}}"
+    }
+  },
+  "education": {
+    "pageTitle": "Education Hub",
+    "pageSubtitle": "Learn smart money habits, take quizzes, and earn rewards.",
+    "tabs": {
+      "learn": "Learn",
+      "manage": "Manage"
+    },
+    "xp": {
+      "path": "{{name}}'s learning path",
+      "earned": "{{xp}} XP earned",
+      "toNext": "{{xp}} XP to next level"
+    },
+    "topics": {
+      "title": "Topics",
+      "subtitle": "Tap any card to start a lesson · quiz at the end",
+      "completed": "Completed",
+      "progress": "{{pct}}% done",
+      "new": "New",
+      "start": "Start lesson",
+      "continue": "Continue",
+      "review": "Review",
+      "lessons": "{{count}} lessons",
+      "empty": "No topics yet. Ask your admin to add some!",
+      "filterEmpty": "No topics match this filter.",
+      "filter": {
+        "all": "All",
+        "progress": "In progress",
+        "completed": "Completed"
+      }
+    },
+    "lesson": {
+      "lessonsLabel": "lessons",
+      "objectives": "After this lesson you'll be able to:",
+      "obj1": "Apply {{topic}} principles to everyday finances",
+      "obj2": "Spot common pitfalls before they cost you money",
+      "obj3": "Earn the {{topic}} Hero badge",
+      "quizNote": "{{count}}-question quiz at the end",
+      "startQuiz": "Start quiz"
+    },
+    "quiz": {
+      "questionOf": "Question {{current}} of {{total}}",
+      "score": "Score",
+      "next": "Next question",
+      "seeResults": "See results"
+    },
+    "results": {
+      "passed": "Nice work, {{name}}!",
+      "failed": "So close — try again!",
+      "score": "You got {{score}} of {{total}} correct",
+      "badge": "Awarded the {{topic}} Hero badge",
+      "claimBadge": "Claim badge",
+      "claimed": "Claimed",
+      "tryAgain": "Try again"
+    },
+    "leaderboard": {
+      "title": "Family leaderboard",
+      "subtitle": "Who's learning the most?",
+      "learner": "Learner"
+    },
+    "admin": {
+      "title": "Manage Topics",
+      "subtitle": "{{count}} topics in your household",
+      "addTopic": "Add topic",
+      "empty": "No topics yet. Create one to get started!",
+      "questions": "questions",
+      "reward": "Reward",
+      "passed": "passed",
+      "editQuiz": "Quiz",
+      "edit": "Edit",
+      "confirmDelete": "Delete this topic and all its questions?",
+      "rewardsTitle": "Quiz Rewards",
+      "rewardsSubtitle": "Set how much each member earns in their wallet when they pass a quiz",
+      "setReward": "Set",
+      "platformDefault": "Platform default",
+      "progressTitle": "Family Progress",
+      "topicsPassed": "topics passed",
+      "earned": "earned",
+      "noMembers": "No family members yet.",
+      "empty": "No topics available on the platform yet."
+    }
+  }
+}

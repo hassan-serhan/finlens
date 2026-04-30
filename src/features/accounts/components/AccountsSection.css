@@ -1,0 +1,88 @@
+.acct-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.acct-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.acct-card__halo {
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.18);
+  pointer-events: none;
+}
+.acct-card__halo--tint {
+  background: rgba(14, 92, 44, 0.08);
+}
+
+.acct-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+}
+
+.acct-card__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.acct-card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.acct-card__icon--main    { background: var(--primary); }
+.acct-card__icon--savings { background: var(--white); }
+
+.acct-card__name {
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.acct-card__last {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+}
+.acct-card__last--tint {
+  color: var(--primary-900);
+}
+
+.acct-card__balance {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 18px;
+  position: relative;
+}
+.acct-card__balance--tint {
+  color: var(--neutral-900);
+}
+
+.acct-card__hint {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 4px;
+  position: relative;
+}
+.acct-card__hint--tint {
+  color: var(--primary-900);
+  font-weight: 600;
+}

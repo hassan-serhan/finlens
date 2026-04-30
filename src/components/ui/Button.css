@@ -1,0 +1,65 @@
+.fl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  font: var(--text-body-md);
+  font-weight: 600;
+  min-height: 44px;
+  transition: background 120ms ease, border-color 120ms ease, color 120ms ease, opacity 120ms ease;
+}
+
+.fl-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.fl-btn--block {
+  width: 100%;
+}
+
+.fl-btn--primary {
+  background: var(--color-primary-container);
+  color: var(--color-on-primary);
+  border-color: var(--color-primary-container);
+}
+.fl-btn--primary:hover:not(:disabled) {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.fl-btn--secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.fl-btn--secondary:hover:not(:disabled) {
+  background: var(--color-secondary-container);
+}
+
+.fl-btn--ghost {
+  background: transparent;
+  color: var(--color-on-surface);
+  border-color: transparent;
+}
+.fl-btn--ghost:hover:not(:disabled) {
+  background: var(--color-surface-container);
+}
+
+.fl-btn__spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: fl-spin 0.7s linear infinite;
+}
+
+@keyframes fl-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

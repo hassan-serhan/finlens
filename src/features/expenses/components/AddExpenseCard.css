@@ -1,0 +1,130 @@
+/* ── CategorySelect trigger ────────────────────────────────────────────────── */
+
+.cat-sel {
+  position: relative;
+}
+
+.cat-sel__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px 10px 14px;
+  border-radius: var(--r-md);
+  border: 1.5px solid var(--neutral-200);
+  background: var(--white);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: start;
+  outline: none;
+  transition: border-color 120ms ease;
+  color: var(--neutral-900);
+  line-height: 1;
+}
+
+.cat-sel__trigger:hover {
+  border-color: var(--neutral-400);
+}
+
+.cat-sel__trigger:focus-visible,
+.cat-sel--open .cat-sel__trigger {
+  border-color: var(--neutral-900);
+}
+
+.cat-sel__badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.cat-sel__label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.cat-sel__chevron {
+  flex-shrink: 0;
+  color: var(--neutral-400);
+  transition: transform 180ms ease;
+}
+
+.cat-sel--open .cat-sel__chevron {
+  transform: rotate(180deg);
+}
+
+/* ── Dropdown list ─────────────────────────────────────────────────────────── */
+
+.cat-sel__list {
+  position: absolute;
+  top: calc(100% + 5px);
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  z-index: 200;
+  background: var(--white);
+  border: 1.5px solid var(--neutral-200);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-lg);
+  max-height: 230px;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+/* hide scrollbar while keeping scroll */
+.cat-sel__list::-webkit-scrollbar { width: 4px; }
+.cat-sel__list::-webkit-scrollbar-track { background: transparent; }
+.cat-sel__list::-webkit-scrollbar-thumb { background: var(--neutral-200); border-radius: 99px; }
+
+.cat-sel__option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 9px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: start;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--neutral-700);
+  transition: background 100ms ease;
+}
+
+.cat-sel__option:hover {
+  background: var(--neutral-50);
+}
+
+.cat-sel__option.is-active {
+  background: var(--neutral-100);
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+.cat-sel__option__icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.cat-sel__option__name {
+  flex: 1;
+}
+
+.cat-sel__option__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}

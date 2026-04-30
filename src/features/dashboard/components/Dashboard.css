@@ -1,0 +1,441 @@
+/* Dashboard — visual layer */
+
+.fl-dash-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  margin-block-end: 18px;
+}
+
+@media (max-width: 1100px) {
+  .fl-dash-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .fl-dash-stats { grid-template-columns: 1fr; }
+}
+
+.fl-stat {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 16px 18px;
+  display: grid;
+  gap: 8px;
+  min-height: 120px;
+  box-shadow: var(--shadow-sm);
+}
+
+.fl-stat--mint  { background: var(--secondary-mint, #DCFAE6); }
+.fl-stat--cream { background: var(--tertiary-cream, #FCF5EB); }
+.fl-stat--warm  { background: #FFF4E0; }
+
+.fl-stat__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--neutral-500);
+}
+
+.fl-stat--mint  .fl-stat__head { color: var(--primary-900, #0E5C2C); }
+.fl-stat--cream .fl-stat__head { color: #7A4A0E; }
+.fl-stat--warm  .fl-stat__head { color: #7A4A0E; }
+
+.fl-stat__icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.6);
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+}
+
+.fl-stat--default .fl-stat__icon { background: var(--neutral-100); }
+
+.fl-stat__label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.fl-stat__value {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--neutral-900);
+}
+
+.fl-stat--mint  .fl-stat__value { color: var(--primary-900, #0E5C2C); }
+
+.fl-stat__meta {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--neutral-500);
+}
+
+.fl-stat__meta--up   { color: var(--primary-700, #1FB055); }
+.fl-stat__meta--down { color: var(--danger, #E5484D); }
+
+/* Budget ring + bars */
+
+.fl-dash-ring {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 8px auto 0;
+}
+
+.fl-dash-ring canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.fl-dash-ring__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.fl-dash-ring__pct {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--neutral-900);
+}
+
+.fl-dash-ring__sub {
+  font-size: 12px;
+  color: var(--neutral-500);
+  margin-top: 2px;
+}
+
+.fl-dash-ring-legend {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.fl-dash-ring-legend__row {
+  display: grid;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--neutral-700);
+}
+
+.fl-dash-ring-legend__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fl-dash-ring-legend__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.fl-dash-ring-legend__label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fl-dash-ring-legend__amt {
+  margin-inline-start: auto;
+  font-weight: 700;
+  color: var(--neutral-900);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.fl-dash-ring-legend__bar {
+  position: relative;
+  height: 6px;
+  background: var(--neutral-100, #EEF1F3);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.fl-dash-ring-legend__fill {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.fl-dash-bars {
+  height: 280px;
+  width: 100%;
+}
+
+.fl-dash-bars canvas {
+  width: 100% !important;
+}
+
+/* Daily spend chart */
+
+.fl-daily-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-block-end: 12px;
+}
+
+.fl-daily-select {
+  appearance: none;
+  background: var(--neutral-50, #F7F8F9);
+  border: 1px solid var(--neutral-200, #E2E6E9);
+  border-radius: 8px;
+  padding: 6px 28px 6px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--neutral-800);
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%235C6970'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 6px;
+}
+
+[dir='rtl'] .fl-daily-select {
+  background-position: left 10px center;
+  padding: 6px 10px 6px 28px;
+}
+
+.fl-daily-select:focus-visible {
+  outline: 2px solid var(--primary-500, #25D366);
+  outline-offset: 1px;
+}
+
+.fl-daily-total {
+  margin-inline-start: auto;
+  font-size: 13px;
+  color: var(--neutral-500);
+  font-variant-numeric: tabular-nums;
+}
+
+.fl-daily-total strong {
+  color: var(--neutral-900);
+}
+
+.fl-daily-chart {
+  height: 260px;
+  width: 100%;
+}
+
+.fl-daily-chart canvas {
+  width: 100% !important;
+}
+
+/* Goals strip */
+
+.fl-dash-goals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .fl-dash-goals { grid-template-columns: 1fr; }
+}
+
+.fl-goal-card {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  min-height: 168px;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.fl-goal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.fl-goal-card--featured {
+  background: linear-gradient(135deg, #0E5C2C 0%, #156635 100%);
+  color: #fff;
+}
+
+.fl-goal-card--tint { background: var(--secondary-mint, #DCFAE6); color: var(--neutral-900); }
+
+.fl-goal-card--warm { background: #FFF4E0; color: var(--neutral-900); }
+
+.fl-goal-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.fl-goal-card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.18);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+}
+
+.fl-goal-card--tint .fl-goal-card__icon,
+.fl-goal-card--warm .fl-goal-card__icon {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.fl-goal-card__chip {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.fl-goal-card--tint .fl-goal-card__chip,
+.fl-goal-card--warm .fl-goal-card__chip {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--neutral-700);
+}
+
+.fl-goal-card__name {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+
+.fl-goal-card__sub {
+  font-size: 12.5px;
+  margin-top: 2px;
+  opacity: 0.7;
+}
+
+.fl-goal-card__bar {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+}
+
+.fl-goal-card--tint .fl-goal-card__bar,
+.fl-goal-card--warm .fl-goal-card__bar {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.fl-goal-card__fill {
+  height: 100%;
+  background: var(--primary, #25D366);
+  border-radius: inherit;
+  transition: width 200ms ease;
+}
+
+.fl-goal-card--featured .fl-goal-card__fill { background: #25D366; }
+
+.fl-goal-card__pct {
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.fl-goal-card__priority {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* Activity feed */
+
+.fl-dash-feed {
+  display: grid;
+  gap: 6px;
+}
+
+.fl-feed-row {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--neutral-50, #F8F9FA);
+}
+
+.fl-feed-row__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: var(--secondary-mint, #DCFAE6);
+  color: var(--primary-900, #0E5C2C);
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.fl-feed-row__avatar--ghost {
+  background: var(--neutral-100);
+  color: var(--neutral-500);
+  font-weight: 500;
+}
+
+.fl-feed-row__body { min-width: 0; }
+
+.fl-feed-row__text {
+  font-size: 13px;
+  color: var(--neutral-800, #1F2A30);
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fl-feed-row__who {
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.fl-feed-row__time {
+  font-size: 11px;
+  color: var(--neutral-500);
+  margin-top: 2px;
+}
+
+.fl-feed-row__amt {
+  font-weight: 700;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.fl-feed-row__amt--out  { color: var(--danger, #E5484D); }
+.fl-feed-row__amt--in   { color: var(--primary-900, #0E5C2C); }
+.fl-feed-row__amt--debt { color: #B8580B; }
+
+/* Shared empty / loading state */
+
+.fl-dash-empty {
+  text-align: center;
+  padding: 28px 16px;
+  color: var(--neutral-500);
+  font-size: 13px;
+}
+
+/* Section header buttons (used inside dashboard cards) */
+
+.fl-dash-card-actions {
+  display: inline-flex;
+  gap: 8px;
+}

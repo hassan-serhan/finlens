@@ -1,0 +1,27 @@
+.glance {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 600px) { .glance { grid-template-columns: 1fr; } }
+
+.glance__cell {
+  background: var(--neutral-50);
+  padding: 14px;
+  border-radius: 14px;
+}
+
+.glance__bar {
+  margin-top: 8px;
+  height: 6px;
+  background: var(--neutral-100);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.glance__fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 200ms ease;
+}

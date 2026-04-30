@@ -1,0 +1,66 @@
+/* Sources card list rows */
+.src-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  background: var(--neutral-50);
+  border-radius: 12px;
+  gap: 8px;
+}
+
+.src-row__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.src-row__meta {
+  flex: 1;
+  margin-left: 8px;
+  min-width: 0;
+}
+
+.src-row__desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.src-row__amt {
+  font-size: 14px;
+  color: var(--primary-900);
+}
+
+/* Ledger card rows */
+.ledger {
+  display: grid;
+  gap: 0;
+}
+
+.ledger__row {
+  display: grid;
+  grid-template-columns: 46px 1fr auto auto;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+}
+
+.ledger__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.ledger__amt-block {
+  text-align: end;
+}
+
+.ledger__amt {
+  font-size: 15px;
+  color: var(--primary-900);
+}

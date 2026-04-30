@@ -1,0 +1,80 @@
+.fl-auth {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(1200px 600px at 100% -20%, rgba(37, 211, 102, 0.18), transparent 60%),
+    radial-gradient(900px 600px at -10% 110%, rgba(0, 109, 47, 0.12), transparent 60%),
+    var(--color-background);
+}
+
+.fl-auth__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+}
+
+.fl-auth__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font: var(--text-headline-md);
+  color: var(--color-on-surface);
+}
+
+.fl-auth__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-container);
+  font-size: 20px;
+}
+
+.fl-auth__brand-name {
+  font-weight: 700;
+}
+
+.fl-auth__main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+  padding: var(--space-lg);
+}
+
+@media (min-width: 900px) {
+  .fl-auth__main {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1100px;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+.fl-auth__hero {
+  display: none;
+}
+@media (min-width: 900px) {
+  .fl-auth__hero {
+    display: block;
+  }
+}
+
+.fl-auth__tagline {
+  font: var(--text-headline-lg);
+  font-size: 40px;
+  line-height: 48px;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.fl-auth__panel {
+  width: 100%;
+  max-width: 440px;
+  margin-inline: auto;
+}

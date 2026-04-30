@@ -1,0 +1,30 @@
+.member-card {
+  background: var(--white);
+  border-radius: var(--r-lg);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.member-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.member-card__bar {
+  height: 6px;
+  background: var(--neutral-100);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.member-card__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-700));
+  border-radius: 999px;
+  transition: width 200ms ease;
+}
