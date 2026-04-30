@@ -19,3 +19,11 @@ npm run dev
 ```
 
 Open http://localhost:5173. The app starts on `/login`. Sign up creates a Supabase auth user (the household admin).
+
+# Hackathon Project Links
+
+## Demo Video
+[Watch the YouTube Demo](https://youtube.com/your-video-link)
+
+## Live Website
+[Open the Project on Render](https://finlens-o207.onrender.com)
