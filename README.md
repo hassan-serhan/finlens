@@ -23,7 +23,7 @@ Open http://localhost:5173. The app starts on `/login`. Sign up creates a Supaba
 # Hackathon Project Links
 
 ## Demo Video
-[Watch the YouTube Demo](https://youtube.com/your-video-link)
+[Watch the YouTube Demo](https://youtu.be/DSwvUO4lqYo)
 
 ## Live Website
 [Open the Project on Render](https://finlens-o207.onrender.com)
