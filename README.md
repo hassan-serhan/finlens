@@ -26,4 +26,12 @@ Open http://localhost:5173. The app starts on `/login`. Sign up creates a Supaba
 [Watch the YouTube Demo](https://youtu.be/DSwvUO4lqYo)
 
 ## Live Website
+Parent account
+email: vafawa7891@donumart.com
+password: 12345678
+
+Child account
+email: ahmad@gmail.com
+password: 12345678
+
 [Open the Project on Render](https://finlens-o207.onrender.com)
